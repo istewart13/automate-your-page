@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8"/>
+      <title>Stage 2 Notes</title>
+      <link rel="stylesheet" href="notes-style.css">
+   </head>
+   <body>
+      <div class="TOC">
+         <h1>Table of Contents</h1>
+         <ol>
+            <li class = "TOC-lesson"><a href="#lesson-1">Lesson 1: Introduction to 'Serious' Programming</a>
+               <ul>
+                  <li><a href="#lesson-1.1">Computer</a></li>
+                  <li><a href="#lesson-1.1">Python</a></li>
+                  <li><a href="#lesson-1.1">Grammar</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-2">Lesson 2: Variables and Strings</a>
+               <ul>
+                  <li><a href="#lesson-2.1">What is a variable?</a></li>
+                  <li><a href="#lesson-2.2">Assignment statements</a></li>
+                  <li><a href="#lesson-2.3">Why are variables useful?</a></li>
+                  <li><a href="#lesson-2.4">Indexing strings</a></li>
+                  <li><a href="#lesson-2.5">Find method</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-3">Lesson 3: Input -> Function -> Output</a>
+               <ul>
+                  <li><a href="#lesson-3.1">Functions</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-4">Lesson 4: Control Flow & Loops: If and While</a>
+               <ul>
+                  <li><a href="#lesson-4.1">if statements</a></li>
+                  <li><a href="#lesson-4.2">while loops</a></li>
+                  <li><a href="#lesson-4.3">Equality comparisons</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-5">Lesson 5: Debugging</a>
+               <ul>
+                  <li><a href="#lesson-5.1">Debugging strategies</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-6">Lesson 6: Structured Data: Lists & For Loops</a>
+               <ul>
+                  <li><a href="#lesson-6.1">Creating and accessing lists</a></li>
+                  <li><a href="#lesson-6.2">Nested lists</a></li>
+                  <li><a href="#lesson-6.3">Mutation and aliasing</a></li>
+                  <li><a href="#lesson-6.4">For loops</a></li>
+                  <li><a href="#lesson-6.5">Index method and in operator</a></li>
+               </ul>
+            </li>
+            <li class = "TOC-lesson"><a href="#lesson-7">Lesson 7: How To Solve Problems</a>
+               <ul>
+                  <li><a href="#lesson-7.1">Problem solving process</a></li>
+               </ul>
+            </li>
+         </ol>
+      </div>
+      <div class="complete_notes">
+         <h1>Important Concepts</h1>
+         <div class="lesson">
+            <h2 id="lesson-1">Lesson 1: Introduction to "Serious" Programming</h2>
+            <div>
+               <h4 class="concept" id="lesson-1.1">Computer</h4>
+                  <div class="concept-description">
+                     A computer is a universal machine that can be <em>programmed</em> to perform any computation, and they can perform billions of operations per second. In order to do this we need to write a program that gives specific instructions to the computer that it is capable of understanding. A <em>program</em> is a precise sequence of steps that a computer can follow to do something useful. Programs need to be written in a <em>programming language</em>, <em>Python</em>is just one example of this.
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-1.2">Python</h4>
+                  <div class="concept-description"> 
+                     When you run a Python program, an <em>interpreter</em> converts the code that you wrote into something that the computer can understand and execute. High-level language instructions that are easy for humans to read/write, are therefore turned into machine code.
+                     An <em>expression in Python</em> is any legal statement. Very minor errors can cause the code not to work. For example <span class="code">print 7</span> is legal, but <span class="code">&nbsp;print 7</span>&nbsp;(with any number of spaces before it) or <span class="code">Print 7</span>is not.
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-1.3">Grammar</h4>
+                  <div class="concept-description">
+                     Programming languages have <em>grammars</em> just like natural languages do. A grammar is a specification of what is "correct" and what is "incorrect."
+                     Peopleare often capable of interpreting statemnts where the grammar is a little bit off, but computers can't. This means that we have to write code that is fully correct, otherwise we will generate a <em>syntax error</em> and our code won't run.
+                  </div>
+            </div>
+         </div>
+         <div class="lesson">
+            <h2 id="lesson-2">Lesson 2: Variables and Strings</h2>
+            <div>
+               <h4 class="concept" id="lesson-2.1">What is a variable?</h4>
+                  <div class="concept-description">
+                     Variables provide a way for programmers to be able to store values in a labelled 'box'. They should be used to improve the readibility of code.For example: <span class="code">my_name = "Iain"</span>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-2.2">Assignment statements</h4>
+                  <div class="concept-description">
+                     Assignment statements allow us to assign a particular value to a variable. In this case the use of the equals sign is not testing for equality (use "==" to do this), but is storing the given value in the variable given. For example:
+                     <span class="code">days_in_week = 7</span>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-2.3">Why are variables useful?</h4>
+                  <div class="concept-description">
+                     Variables can be useful to programmers in many ways:
+                     <ul>
+                        <li>They improve code readability by using names that make sense to humans.</li>
+                        <li>They give us a way to store values which can be used again later in the code.</li>
+                        <li>They give us a way to update the value of something, which can be used in conjunction with other key programming concepts (eg. to iterate through the values in a loop).</li>
+                     </ul>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-2.4">Indexing strings</h4>
+                  <div class="concept-description">
+                     Indexing strings is very resiliant and works even if we index positions that don't exist in the string. eg. <span class="code">t = "Hi"</span> <span class="code">print t[:3] + t[3:]</span> returns Hi
+                     It is different if we try to index particular characters by themselves though.
+                     eg. <span class="code">t[3]</span> returns a string index out of range error
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-2.5">Find method</h4>
+                  <div class="concept-description">
+                     The find method lets us search for a substring within the string on which it is called. The output is a number that gives the first position in the <em>search string</em> where the <em>target string</em> occurs (or -1 if it is not found). You can also add a starting location from which to begin searching the string as a second parameter. eg. <span class="code">"namename".find("n", 3)</span> 
+                  </div>
+            </div>
+         <div class="lesson">
+            <h2 id="lesson-3">Lesson 3: Input -> Functions -> Output</h2>
+            <div>
+               <h4 class="concept" id="lesson-3.1">Functions</h4>
+                  <div class="concept-description">
+                     <ul>   
+                        <li>Functions take input, do something with it, and then produce output.
+                        <li>Functions are created by starting a line of code with the keyword <span class="code">def</span> and then giving a <em>function name</em> followed by the function <em>parameters</em> in parentheses. These parameters will be replaced by actual values when the function is called.
+                        <li>The <span class="code">return</span> keyword tells Python exactly what the function should produce as output
+                        <li>In the 'body' of the function, we write the code that specifies what to do with the input parameters. For example the following code could be the definition of a function called square:
+                        <span class="code"><br>def square(x): 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;answer = x * x 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;return answer</span>
+                        <li>To use a function, we write the name of the function followed by the value(s) we want to give it in parentheses. Like this:
+                        <span class="code"><br>print square(6): 
+                        <br>>>>36</span>
+                        <li>Functions significantly improve the reusability of a piece of code - they can be created once and the called any number of times.
+                     <ul>
+                  </div>
+            </div>
+         </div>
+         <div class="lesson">
+            <h2 id="lesson-4">Lesson 4: Control Flow & Loops: If and While</h2>
+            <div>
+               <h4 class="concept" id="lesson-4.1">if statements</h4>
+                  <div class="concept-description">
+                     If statements are used along with comparisons to make decisions in our code, different code will be executed depending on the result of the comparison.
+                     <br>if &lt;TestExpression&gt;:<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;Block&gt;
+                     <br>eg.<br><span class="code">x = 5<br>if x &gt; 4:<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;return "x is greater than 4"</span>
+                     <br>You can also use the <b><em>or</em></b> operator in conjunction with if statements. In this case if either of the expressions is true, then the value is True.
+
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-4.2">while loops</h4>
+                  <div class="concept-description">
+                     In a while loop, the block can execute any number of times as long as the test expression remains true.
+                     <br>while &lt;TestExpression&gt;:<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;Block&gt;
+                     <br>eg. To print the numbers 0 to 9:
+                     <br><span class="code">i = 0<br>while i &lt; 10:
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;print i
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</span>
+                     <br>Break gives us a way to stop the loop even whilst the test condition is true. Its format is:
+                     <br>while &lt;TestExpression&gt;:
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Code&gt;
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;if &lt;BreakTest&gt;:
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-4.3">Equality comparisons</h4>
+                  <div class="concept-description">
+                     Python provides lots of different operators for doing comparisons. The output of a comparison is a Boolean value (either true or false).
+                     <table>
+                        <tr>
+                           <th>Operation</th>
+                           <th>Meaning</th>
+                        </tr>
+                        <tr>
+                           <td>&lt;</td>
+                           <td>strictly less than</td>
+                        </tr>
+                        <tr>
+                           <td>&lt;= </td>
+                           <td>less than or equal</td>
+                        </tr>
+                        <tr>
+                           <td>&gt;</td>
+                           <td>strictly greater than</td>
+                        </tr>
+                        <tr>
+                           <td>&gt;=</td>
+                           <td>greater than or equal</td>
+                        </tr>
+                        <tr>
+                           <td>==</td>
+                           <td>equal</td>
+                        </tr>
+                        <tr>
+                           <td>!=</td>
+                           <td>not equal</td>
+                        </tr>
+                     </table>        
+                  </div>
+            </div>
+         </div>
+         <div class="lesson">
+            <h2 id="lesson-5">Lesson 5: Debugging</h2>
+            <div>
+               <h4 class="concept" id="lesson-5.1">Debugging strategies</h4>
+                  <div class="concept-description">
+                     <ol>
+                        <li>
+                           <b>Examine error messages when programs crash: </b>
+                           The last line of Python Tracebacks will tell you what went wrong. Reading backwards from there will tell you more about where the problem occurred.
+                        </li>
+                        <li>
+                           <b>Work from example code: </b>
+                           If your modified code doesn't work, comment it out and do step-by-step modifications to the example code until it does what you want.
+                        </li>
+                        <li>
+                           <b>Make sure examples work: </b>
+                           Just because you find example code doesn't mean it will work in your system. Check the example code you're using to make sure it behaves the way you expect.
+                        </li>
+                        <li>
+                           <b>Check (print) intermediate results: </b>
+                           When your code doesn't crash, but doesn't behave as expected, add print statements to your program to see where in the code things stop behaving correctly.
+                        </li>
+                        <li>
+                           <b>Keep and compare old versions: </b>
+                           When you have a working version of your code, save it before you add to the code. This will give you something to go back to if you introduce too many new bugs.
+                        </li>
+                     </ol>
+                  </div>
+            </div>
+         </div>
+         <div class="lesson">
+            <h2 id="lesson-6">Lesson 6: Structured Data: Lists & For Loops</h2>
+            <div>
+               <h4 class="concept" id="lesson-6.1">Creating and accessing lists</h4>
+                  <div class="concept-description">
+                     A <em>string</em> is a sequence of characters, whilst a <b><em>list</em></b> is a sequence of any structured data (characters, strings, numbers, other lists etc). We use <em>square brackets []</em> to identify a list in python, and elements are separated by commas. Lists can contain a mixture of strings and numbers if required.
+                     <br>eg. <span class="code">name = ['I','a','i','n']</span>
+                     <br>Lists can be 'accessed' and 'sliced' in the same way that strings can.
+                     <br>eg. <span class="code">print name[1] --> a</span>
+                     <br>eg. <span class="code">print name[1:3] --> ['a','i']</span>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-6.2">Nested lists</h4>
+                  <div class="concept-description">
+                     List can contain other lists within them.
+                     <br>eg. <span class="code">nested_list = ['I',['a','i'],['n']]</span>
+                     <br>You can access particular values which are contained in a list within a list as follows:
+                     <br><span class="code">third_letter = nested_list[1][1]</span>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-6.3">Mutation and aliasing</h4>
+                  <div class="concept-description">
+                     Lists support mutation, whilst strings do not. <b><em>Mutation</em></b> means that we can change the value of a list after it has been created.
+                     <br>eg. <span class="code">name = ['I','a','i','m']
+                     <br>name[3] = 'n'
+                     <br> print name --> ['I','a','i','n']</span>
+                     <br>If there are two or more pointers to a list and the list is changed, then all pointers will now point to the updated list. Need to be careful with this, as changing one variable could result in another being updated unintentionally.
+                     <br><br><b><em>Aliasing</em></b> is when there are two (or more) different ways to refer to the same object.
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-6.4">List operations</h4>
+                  <div class="concept-description">
+                     <b><em>Append method</em></b> is used to add an element to the end of a list. Its format is 
+                     <br><span class="code">&lt;list&gt;.append(&lt;element&gt;)</span>
+                     <br><br><b><em>Addition method</em></b> behaves like the concatenation operation for strings, and produces a new list which contains all of the values being combined.
+                     <br><span class="code">&lt;list&gt;+&lt;list&gt;</span>
+                     <br>eg.<span class="code">[0,1] + [2,3] --> [0,1,2,3]</span>
+                     <br><br><b><em>Len</em></b> works for any object that is a collection of things, the output is the number of elements in the input. It only counts the number of out elements however, so a list within another list only counts as one element.
+                     <br><span class="code">len(&lt;list&gt;)</span>
+                     <br>eg.<span class="code">len([0,1,2,3]) --> 4</span>
+                     <br>eg.<span class="code">len("Udacity") --> 7</span>
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-6.4">For loops</h4>
+                  <div class="concept-description">
+
+                     <br><span class="code">for &lt;name&gt; in &lt;list&gt;
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Block&gt;</span>
+                     <br>eg. <span class="code">for &lt;name&gt; in &lt;name_list&gt;
+                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;print name&gt;</span>
+
+                     <br><br>This can be used in conjunction with a range function which generates a list of values in the given range (upto but not including the final value)
+                     <br><span class="code">range([start], stop[, step])
+                     <br>eg. <span class="code">print range(5) --> <br>1<br>2<br>3<br>4</span>
+                     <br>eg. <span class="code">print range(3,6) --> <br>3<br>4<br>5</span>
+                     <br>eg. <span class="code">print range(4,10,2) --> <br>4<br>6<br>8</span>
+
+                  </div>
+            </div>
+            <div>
+               <h4 class="concept" id="lesson-6.5">Index method and in operator</h4>
+                  <div class="concept-description">
+                     You pass in a value, and the output of the method is the first position at which the value exists in the list (or an error if the value isn't in the list).
+                     <br><span class="code">&lt;list&gt;.index(&lt;value&gt;)</span>
+                     <br>eg. <span class="code">name_list.index("Iain")</span>
+                     <br><br>With the in operator, if the value given is in the list then output is True, otherwise it is false. You can also use the not in operator, which would return the opposite result.
+                     <br><span class="code">&lt;value&gt; in &lt;list&gt; 
+                     <br>eg. <span class="code">5 in [3,4,5] --> True</span>
+                  </div>
+            </div>
+         </div>
+         <div class="lesson">
+            <h2 id="lesson-7">Lesson 7: How To Solve Problems</h2>
+            <div>
+               <h4 class="concept" id="lesson-7.1">Problem solving process</h4>
+                  <div class="concept-description">
+                     <ol>
+                        <li>Make sure that you understand the problem</li>
+                        <li>Work out what the inputs are</li>
+                        <li>Work out what the outputs should be</li>
+                        <li>Understand the relationship between inputs and outputs - based on some examples</li>
+                        <li>Consider how the problem could be solved systematically by a human (write this out in pseudocode)</li>
+                        <li>Develop a simple mechanical algorithm (Break the problem into the smallest component pieces)</li>
+                        <li>Develop the solution incrementally and test each step as you go</li>
+                        <br><li>Additional notes from office hours:</li>
+                     </ol>
+                  </div>
+            </div>
+         </div>
+
+<!--
+         <div class="lesson">
+            <h2 id="lesson-3">Lesson 3: ...</h2>
+            <div>
+               <h4 class="concept" id="lesson-3.1">Lesson name ...</h4>
+                  <div class="concept-description">
+                     Content here ...
+                  </div>
+            </div>
+         </div>
+
+
+-->
+      </div>   
+   </body>
+</html>
